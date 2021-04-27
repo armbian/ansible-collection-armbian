@@ -1,2 +1,3 @@
-# ansible-collection-armbian
-ansible collection for armbian related facts and utilities 
+# Ansible Collection - armbian.armbian
+
+Documentation for the collection.
