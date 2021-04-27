@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Copyright (c) 2020 Ansible Project
+# Copyright (c) 2021 Sam Doran
 # GNU General Public License v3.0+ (see COPYING or https://www.gnu.org/licenses/gpl-3.0.txt)
 
 from __future__ import absolute_import, division, print_function
@@ -9,7 +9,7 @@ __metaclass__ = type
 
 DOCUMENTATION = """
 ---
-module: Armbian Facts
+module: armbian_facts
 author:
     - Sam Doran (@samdoran)
 version_added: '1.0.0'
@@ -19,8 +19,6 @@ description:
     - Gather detailed facts about Armbian from C(/etc/armbian-release). If facts are unable to be gathered,
       an empty dictionary is returned. This can be run safelay against non-Armbian hosts.
     - This module can be added to the default list of C(FACTS_MODULES).
-    
-options: {}
 """
 
 EXAMPLES = """
@@ -149,9 +147,7 @@ def parse_armbian_release():
 
 def main():
     module = AnsibleModule(
-        argument_spec={
-            'fact_path': {'type': 'path'},
-        },
+        argument_spec={},
         supports_check_mode=True,
     )
 
